@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.Params.description }}">
+  <meta name="theme-color" content="#07110f">
+  <title>{{ site.Title }}</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ $styles := resources.Get "css/main.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to research</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="Northstar Research home">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span class="brand-name">Northstar <b>Research</b></span>
+      </a>
+      <div class="header-meta">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>Research current as of {{ site.Params.asOf }}</span>
+      </div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
+        <span class="sr-only">Open report navigation</span>
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="reading-progress" aria-hidden="true"><span></span></div>
+  </header>
+  {{ block "main" . }}{{ end }}
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <a class="brand footer-brand" href="/">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="brand-name">Northstar <b>Research</b></span>
+        </a>
+        <p>Independent company research for informed decision-making.</p>
+      </div>
+      <p class="footer-note">For research and educational purposes only.<br>Not investment advice.</p>
+    </div>
+  </footer>
+  {{ $script := resources.Get "js/main.js" | minify | fingerprint }}
+  <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
+</body>
+</html>
