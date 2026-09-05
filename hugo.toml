@@ -1,4 +1,4 @@
-baseURL = "https://ampx-northstar-research.lovely-dream-9077.chatgpt.site/"
+baseURL = "https://ampx-northstar-research.kwakwak.chatgpt.site/"
 locale = "en-US"
 title = "Northstar Research | AMPX"
 publishDir = "dist"
