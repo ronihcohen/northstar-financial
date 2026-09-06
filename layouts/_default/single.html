@@ -5,6 +5,7 @@
     <div class="eyebrow">{{ .Params.category | default "Research" }}{{ with .Params.ticker }} / {{ . }}{{ end }}</div>
     <h1>{{ partial "report-title.html" . }}</h1>
     {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    {{ with .Params.pdf }}<a class="pdf-download" href="{{ . | relURL }}" download>Download original PDF ↓</a>{{ end }}
   </section>
   <div class="mobile-nav" id="mobile-nav" hidden>
     <a class="back-link" href="{{ site.Home.RelPermalink }}">← All research</a>
@@ -23,7 +24,7 @@
         {{ with .Params.risk }}<div><span>Risk profile</span><strong>{{ . }}</strong></div>{{ end }}
         <div><span>Reading time</span><strong>{{ .ReadingTime }} min</strong></div>
       </div>
-      <div class="report-body">{{ .Content }}</div>
+      <div class="report-body">{{ .Content | replaceRE `(?s)^<h1[^>]*>.*?</h1>\s*` "" | safeHTML }}</div>
     </article>
   </div>
 </main>

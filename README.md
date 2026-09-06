@@ -22,11 +22,13 @@ ticker: "SYMBOL"
 company: "Company name"
 horizon: "3–5 years"
 risk: "Speculative"
+pdf: "reports/original-report.pdf"
 draft: false
 ---
 ```
 
-All fields are optional. Dates in the future and `draft: true` are excluded by
+All fields are optional. The `pdf` field adds an original-PDF download link and
+is relative to the `static/` folder. Dates in the future and `draft: true` are excluded by
 Hugo's normal build. Undated reports appear after dated ones.
 Use headings (`##`, `###`) for the automatic report navigator.
 Use subfolders for organization; every published report is still listed on the homepage.

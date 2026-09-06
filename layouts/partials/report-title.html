@@ -1,5 +1,7 @@
-{{- $title := .Title -}}
-{{- if not $title -}}
+{{- $title := "" -}}
+{{- if isset .Params "title" -}}
+  {{- $title = .Title -}}
+{{- else -}}
   {{- $headings := findRE `(?m)^#\s+(.+)$` .RawContent 1 -}}
   {{- if $headings -}}
     {{- $title = replaceRE `^#\s+` "" (index $headings 0) -}}
