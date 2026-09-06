@@ -5,6 +5,7 @@
     <div class="eyebrow">{{ .Params.category | default "Research" }}{{ with .Params.ticker }} / {{ . }}{{ end }}</div>
     <h1>{{ partial "report-title.html" . }}</h1>
     {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    {{ if isset .Params "ten_x_outlook" }}<div class="report-tenx {{ if .Params.ten_x_possible }}is-possible{{ else }}is-unproven{{ end }}"><strong>{{ if .Params.ten_x_possible }}10× possible{{ else }}10× not supported{{ end }}</strong><span>{{ .Params.ten_x_outlook }}</span></div>{{ end }}
     {{ with .Params.pdf }}<a class="pdf-download" href="{{ . | relURL }}" download>Download original PDF ↓</a>{{ end }}
   </section>
   <div class="mobile-nav" id="mobile-nav" hidden>

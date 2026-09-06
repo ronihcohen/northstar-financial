@@ -8,6 +8,8 @@ category: "Equity research"
 horizon: "3–5 years"
 risk: "Speculative"
 base_value_5y: "$15,026"
+ten_x_possible: false
+ten_x_outlook: "Not supported by the 3–5 year model"
 ---
 
 # AMPX - Amprius research assessment
@@ -37,7 +39,7 @@ Batteries can be a decisive constraint in aircraft and other weight-sensitive pr
 
 A high starting sales multiple means a large part of future success is already anticipated. Revenue can grow quickly while per-share returns disappoint if margins stall, competitors reduce pricing, or the share count rises. The scenario model below makes those effects explicit.
 
-**Correction to the earlier discussion:** describing AMPX as a favorite "50x-type setup" overstated the evidence. Mathematical possibility is not an investment thesis. This investigation provides no defensible probability of a 50-fold return.
+**10× outlook:** not supported by the current 3–5 year evidence. The modeled bull case reaches about 4.2× and already requires substantial commercial scale, strong differentiation and limited dilution.
 
 [Google Finance. Google Finance: AMPX quote. September 4, 2026 close.](https://www.google.com/finance/quote/AMPX:NYSE)
 
@@ -174,7 +176,7 @@ The multiples are judgment calls. At 10% operating margin, 4x sales equals 40x o
 
 At $500 million revenue, 3x sales, zero net cash and 180 million shares, the model gives $8.33 per share: about 16% below the reference price despite substantial business growth. That is the practical risk of paying for success in advance.
 
-A 50x share-price outcome would imply $494.50 per share. With 180 million future shares, that requires about $89 billion equity value; at 6x sales and zero net debt, approximately $14.8 billion annual revenue. There is no evidence here that supports treating that outcome as a planning assumption.
+A 10× share-price outcome would imply $98.90 per share. With 180 million future shares, that requires about $17.8 billion of equity value; at 6× sales and zero net debt, approximately $3.0 billion of annual revenue. That is well above the report's $1.2 billion bull case, so 10× is not a supported planning assumption within this horizon.
 
 [Google Finance. Google Finance: AMPX quote. September 4, 2026 close.](https://www.google.com/finance/quote/AMPX:NYSE)
 

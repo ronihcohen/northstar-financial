@@ -8,6 +8,8 @@ category: "Equity research"
 horizon: "Up to 5 years"
 risk: "Highly speculative"
 base_value_5y: "$13,650"
+ten_x_possible: false
+ten_x_outlook: "Not supported by the current 5-year model"
 ---
 
 # SoundHound AI (NASDAQ: SOUN): Deep Long-Term Investment Research
@@ -32,6 +34,8 @@ The investment case is weakened by five facts:
 5. SoundHound still reported material weaknesses in financial controls at June 30, 2026.
 
 My five-year base case produces a share value near **$9.20** and turns $10,000 into about **$13,650**, a return of only **6.4% annualized**. That is positive, but modest relative to the risk. The bull case is powerful; the bear case is severe.
+
+**10× outlook:** not supported by the current five-year model. A 10× return would require a $67.40 share price and roughly $38–40 billion of equity value at the modeled future share counts, far above the $14.4 billion bull-case valuation.
 
 | Assessment area | Rating | Conclusion |
 |---|---:|---|
