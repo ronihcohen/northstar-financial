@@ -7,6 +7,7 @@ company: "Innodata"
 category: "Equity research"
 horizon: "5 years"
 risk: "Speculative growth"
+base_value_5y: "~$29,000"
 pdf: "reports/INOD_Innodata_Deep_Research_2026-09-05.pdf"
 ---
 

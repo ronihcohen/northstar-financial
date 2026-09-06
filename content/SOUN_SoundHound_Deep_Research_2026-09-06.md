@@ -7,6 +7,7 @@ company: "SoundHound AI"
 category: "Equity research"
 horizon: "Up to 5 years"
 risk: "Highly speculative"
+base_value_5y: "$13,650"
 ---
 
 # SoundHound AI (NASDAQ: SOUN): Deep Long-Term Investment Research

@@ -22,12 +22,15 @@ ticker: "SYMBOL"
 company: "Company name"
 horizon: "3–5 years"
 risk: "Speculative"
+base_value_5y: "$15,000"
 pdf: "reports/original-report.pdf"
 draft: false
 ---
 ```
 
-All fields are optional. The `pdf` field adds an original-PDF download link and
+All fields are optional. `base_value_5y` shows the report's base-case value of a
+hypothetical $10,000 investment on its homepage card; reports without it show
+"Not modeled." The `pdf` field adds an original-PDF download link and
 is relative to the `static/` folder. Dates in the future and `draft: true` are excluded by
 Hugo's normal build. Undated reports appear after dated ones.
 Use headings (`##`, `###`) for the automatic report navigator.

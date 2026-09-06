@@ -7,6 +7,7 @@ company: "Amprius Technologies"
 category: "Equity research"
 horizon: "3–5 years"
 risk: "Speculative"
+base_value_5y: "$15,026"
 ---
 
 # AMPX - Amprius research assessment
