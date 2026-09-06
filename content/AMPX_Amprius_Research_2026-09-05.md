@@ -1,3 +1,14 @@
+---
+title: "AMPX — Amprius research assessment"
+date: 2026-09-05
+description: "A promising specialist battery business, with a demanding valuation and substantial execution risk."
+ticker: "AMPX"
+company: "Amprius Technologies"
+category: "Equity research"
+horizon: "3–5 years"
+risk: "Speculative"
+---
+
 # AMPX - Amprius research assessment
 
 Audience: investor researching a hypothetical $10,000 exposure. Date: September 5, 2026. Scope: 3-5 years.

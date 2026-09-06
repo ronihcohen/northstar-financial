@@ -1,0 +1,6 @@
+{{ define "main" }}
+<main class="library" id="main-content">
+  <section class="library-heading"><a href="{{ site.Home.RelPermalink }}">← All research</a><h1>{{ .Title }}</h1></section>
+  <section class="library-reports">{{ .Content }}{{ range .RegularPagesRecursive.ByDate.Reverse }}<article class="report-card"><h2><a href="{{ .RelPermalink }}">{{ partial "report-title.html" . }}</a></h2><p>{{ .Description | default (.Summary | plainify | truncate 220) }}</p></article>{{ end }}</section>
+</main>
+{{ end }}

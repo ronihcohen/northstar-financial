@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ site.Params.description }}">
+  <meta name="description" content="{{ .Description | default site.Params.description }}">
   <meta name="theme-color" content="#07110f">
-  <title>{{ site.Title }}</title>
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <title>{{ if .IsPage }}{{ partial "report-title.html" . }} | {{ end }}{{ site.Title }}</title>
+  <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
   <link rel="canonical" href="{{ .Permalink }}">
   {{ $styles := resources.Get "css/main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
@@ -15,20 +15,20 @@
   <a class="skip-link" href="#main-content">Skip to research</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="/" aria-label="Northstar Research home">
+      <a class="brand" href="{{ site.Home.RelPermalink }}" aria-label="Northstar Financial home">
         <span class="brand-mark" aria-hidden="true">
           <span></span><span></span><span></span>
         </span>
-        <span class="brand-name">Northstar <b>Research</b></span>
+        <span class="brand-name">Northstar <b>Financial</b></span>
       </a>
       <div class="header-meta">
         <span class="status-dot" aria-hidden="true"></span>
-        <span>Research current as of {{ site.Params.asOf }}</span>
+        <a href="{{ site.Home.RelPermalink }}">Research library</a>
       </div>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
+      {{ if .IsPage }}<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
         <span class="sr-only">Open report navigation</span>
         <span></span><span></span>
-      </button>
+      </button>{{ end }}
     </div>
     <div class="reading-progress" aria-hidden="true"><span></span></div>
   </header>
@@ -36,11 +36,11 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div>
-        <a class="brand footer-brand" href="/">
+        <a class="brand footer-brand" href="{{ site.Home.RelPermalink }}">
           <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
-          <span class="brand-name">Northstar <b>Research</b></span>
+          <span class="brand-name">Northstar <b>Financial</b></span>
         </a>
-        <p>Independent company research for informed decision-making.</p>
+        <p>Businesses. Markets. Valuation. Risk.</p>
       </div>
       <p class="footer-note">For research and educational purposes only.<br>Not investment advice.</p>
     </div>

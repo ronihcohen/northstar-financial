@@ -1,15 +1,12 @@
-baseURL = "https://ampx-northstar-research.kwakwak.chatgpt.site/"
+baseURL = "https://ronihcohen.github.io/northstar-financial/"
 locale = "en-US"
-title = "Northstar Research | AMPX"
+title = "Northstar Financial"
 publishDir = "dist"
 enableRobotsTXT = true
 disableKinds = ["taxonomy", "term", "RSS"]
 
 [params]
-  description = "Independent, evidence-led research assessment of Amprius Technologies for a 3–5 year investment horizon."
-  ticker = "AMPX"
-  company = "Amprius Technologies"
-  asOf = "September 5, 2026"
+  description = "Financial research on businesses, markets, valuation, and investment risk."
 
 [markup]
   [markup.goldmark]

@@ -1,7 +1,30 @@
 {{ define "main" }}
-<main id="main-content" class="standalone-report">
-  <article class="report-content">
-    {{ .Content }}
-  </article>
+<main id="main-content">
+  <section class="report-heading">
+    <a class="back-link" href="{{ site.Home.RelPermalink }}">← All research</a>
+    <div class="eyebrow">{{ .Params.category | default "Research" }}{{ with .Params.ticker }} / {{ . }}{{ end }}</div>
+    <h1>{{ partial "report-title.html" . }}</h1>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+  </section>
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <a class="back-link" href="{{ site.Home.RelPermalink }}">← All research</a>
+    <span class="nav-label">In this report</span>
+    {{ .TableOfContents | replaceRE `id="TableOfContents"` `id="mobile-toc"` | safeHTML }}
+  </div>
+  <div class="report-shell">
+    <aside class="report-sidebar"><div class="sidebar-sticky">
+      <a class="back-link" href="{{ site.Home.RelPermalink }}">← All research</a>
+      <span class="nav-label">In this report</span>{{ .TableOfContents }}
+    </div></aside>
+    <article class="report-content">
+      <div class="article-meta">
+        {{ if not .Date.IsZero }}<div><span>Published</span><strong>{{ .Date.Format "02 Jan 2006" }}</strong></div>{{ end }}
+        {{ with .Params.horizon }}<div><span>Horizon</span><strong>{{ . }}</strong></div>{{ end }}
+        {{ with .Params.risk }}<div><span>Risk profile</span><strong>{{ . }}</strong></div>{{ end }}
+        <div><span>Reading time</span><strong>{{ .ReadingTime }} min</strong></div>
+      </div>
+      <div class="report-body">{{ .Content }}</div>
+    </article>
+  </div>
 </main>
 {{ end }}

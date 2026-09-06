@@ -1,0 +1,10 @@
+{{- $title := .Title -}}
+{{- if not $title -}}
+  {{- $headings := findRE `(?m)^#\s+(.+)$` .RawContent 1 -}}
+  {{- if $headings -}}
+    {{- $title = replaceRE `^#\s+` "" (index $headings 0) -}}
+  {{- else -}}
+    {{- $title = replaceRE `[_-]+` " " .File.ContentBaseName -}}
+  {{- end -}}
+{{- end -}}
+{{- return ($title | plainify) -}}
